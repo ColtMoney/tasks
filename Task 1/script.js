@@ -1,24 +1,25 @@
 "use strict";
 
-var money = +prompt("Ваш бюджет на месяц?", "400"),
-    time = prompt("Введите дату в формате YYYY-MM-DD", "2019-02-22"),
-    itemExpensesFirst = prompt("Введите обязательную статью расходов в этом месяце", "Еда"),
-    costItemExpensesFirst = +prompt("Во сколько обойдется?", "100"),
-    itemExpensesSecond = prompt("Введите обязательную статью расходов в этом месяце", "Развлечения"), 
-    costItemExpensesSecond = +prompt("Во сколько обойдется?", "150");
+let money = +prompt("Ваш бюджет на месяц?", ""),
+    time = prompt("Введите дату в формате YYYY-MM-DD", ""),
+    itemExpensesFirst = prompt("Введите обязательную статью расходов в этом месяце", ""),
+    costItemExpensesFirst = +prompt("Во сколько обойдется?", ""),
+    itemExpensesSecond = prompt("Введите обязательную статью расходов в этом месяце", ""), 
+    costItemExpensesSecond = +prompt("Во сколько обойдется?", "");
 
-var appData = {
+let appData = {
     moneyData: money,
     timeData: time,
     expenses: {
-        itemFirst: itemExpensesFirst,
-        costItemFirst: costItemExpensesFirst,
-        itemSecond: itemExpensesSecond,
-        costItemSecond: costItemExpensesSecond,
+        itemExpensesFirst: costItemExpensesFirst,
+        itemExpensesSecond: costItemExpensesSecond
     },
     optionalExpenses: {},
     income: [],
     savings: false
 };
 
+
 alert("Бюджет на день:" + appData.moneyData / 30);
+
+console.log(appData.expenses.itemExpensesFirst);
